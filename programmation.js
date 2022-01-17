@@ -20,6 +20,24 @@ let d = "30";
 
 //ARRAY
 let monTableau = ["pomme", "banane", "fraise"]
+let monTableau2 = new Array("pomme", "banane", "fraise");
+
+monTableau.push("figue"); //push permet d'ajouter un ou plusieurs éléments à un tableau
+monTableau.slice(0, 2); //Slice permet de supprimer un ou plusieurs éléments à un tableau
+monTableau.pop(); //pop supprime le dernier élément d'un tableau
+monTableau.shift(); //meme chose que pop avec le premier
+monTableau.reverse(); //inverse l'ordre du tableau
+
+let search = monTableau.find(function(fruit) { //find et findIndex permettent de chercher des éléments respectant des conditions précisées dans la fonction passée en paramètre
+    //return fruit === 'banane';
+    if (fruit === 'banane') {
+        return true;
+    }
+    else {
+        return false;
+    }
+});
+console.log(search);
 
 // STRUCTURES DE CONTROLE
 
@@ -61,6 +79,12 @@ for (let i = 0; i < 10; i++) {
 monTableau.forEach(fruit => {
     console.log(fruit);
 });
+
+
+//équivalent à 
+for(let element of monTableau) {
+    console.log(element);
+}
 
 
 

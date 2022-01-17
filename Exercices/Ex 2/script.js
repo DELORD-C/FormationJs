@@ -1,5 +1,5 @@
 function quelAgeAuraisJe(debut, fin) {
-    console.log((fin - debut) + ' ans');
+    return ((fin - debut) + ' ans');
 }
 
-quelAgeAuraisJe(1993, 2021);
+let monAge = quelAgeAuraisJe(1993, 2021);
