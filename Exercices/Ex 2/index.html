@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        pre code {
+            background-color: #eee;
+            border: 1px solid #999;
+            display: block;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -18,6 +26,28 @@
             </li>
         </ul>
     </nav>
+    <h1>
+        Exercice 2
+    </h1>
+    <p>
+Dans script.js
+
+Creer une fonction "quel age aurais-je" ex : quelAgeAuraisJe()
+qui prend en paramètre une année de naissance et une année future
+et qui donne l'age en fonction de la différence entre les deux dates
+
+ex : quelAgeAuraisJe(1990, 2010)
+résultat : 20 ans
+    </p>
+    <pre>
+        <code>
+            function quelAgeAuraisJe(debut, fin) {
+                console.log((fin - debut) + ' ans');
+            }
+            
+            quelAgeAuraisJe(1993, 2021);
+        </code>
+    </pre>
     <script src="script.js"></script>
 </body>
 </html>
