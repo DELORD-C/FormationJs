@@ -104,6 +104,10 @@ function compter (fin, départ = 0) { //définir une valeur par défaut d'un par
     }
 }
 
+function actions () {
+
+}
+
 compter(10);
 compter(10, 9);
 
@@ -116,3 +120,87 @@ let chiffre2 = 10;
 let phrase = debut + fin + (chiffre1 + chiffre2);
 
 console.log(phrase);
+
+
+
+//SUCRES SYNTAXIQUES
+
+
+//déclaration de variables
+//let a = 1, b = 2, c = 3;
+
+//FONCTIONS
+//fonction normale
+function nomDeLaFonction () {
+    actions();
+}
+
+//fonction fléchée anonyme : réduction syntaxique uniquement
+() => {
+    actions();
+}
+
+//fonction anonyme auto invoquée : utile pour supprimer automatiquement des variables etc..
+(function ()  {
+    actions();
+})
+
+//fonction anonyme stockée : utile pour manipuler des fonctions comme des variables.
+let nomDeLaFonctionAnonyme = function () {
+    actions();
+}
+
+//fonction anonyme nommée stockée : probablement utilse un jour
+let nomDeLaFonctionAnonymeNommée = function nomDeLaFonctionAnonymeNomméeDeux () {
+    actions();
+}
+
+let array = [nomDeLaFonctionAnonyme, nomDeLaFonctionAnonymeNommée]
+
+nomDeLaFonction();
+nomDeLaFonctionAnonyme();
+
+
+
+//LOOP
+for (let index = 0; index < array.length; index++) { //for classique
+    const element = array[index];   
+}
+
+for (let element of array) { //pseudo for each : optimisé en fonction du type d'objet
+//for (let element in array) {
+
+}
+
+array.forEach(element => { //foreach classique
+    
+});
+
+
+
+
+//TERNAIRE
+//if
+//let c;
+if (a == b) {
+    c = true;
+}
+else {
+    c = false
+}
+
+//let c = a == b ? true : false;
+// ternaire : CONDITION ? VALEUR SI VRAI : VALEUR SI FAUX
+//on l'utilise lorsque l'on souhaite réduire la verbosité d'une condition if else, idéalement
+//lorsque cette condition est simple
+
+
+
+
+//décomposition
+let x, y, rest;
+[x, y] = [10, 20]; //affectation par décomposition
+
+[x, y, ...rest] = [10, 20, 30, 40, 50, 80]; //paramètre rest (rest parameter) permet une affectation par décomposition avec un nombre non définit de valeurs
+
+console.log(rest);

@@ -22,7 +22,7 @@ console.log(aList);
 //    alert('Merci');
 //}
 
-display.addEventListener("click", function () {
+display.addEventListener("click", () => {
     if (document.querySelector('h1').style.opacity == 0) {
         showTitle();
     }
