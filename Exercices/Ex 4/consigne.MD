@@ -9,7 +9,7 @@ esurant X lignes de haut (X étant le paramètre)
 ex : sapinDeNoel(5)
 
 Résultat :
-    0  
+    0
    000
   00000
  0000000
