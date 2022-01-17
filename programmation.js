@@ -19,7 +19,7 @@ let d = "30";
 // >=           est supérieur ou égale à
 
 //ARRAY
-let monTableau = ["pomme", "banane", "fraise"]
+let monTableau = ["pome", "banane", "fraise"]
 let monTableau2 = new Array("pomme", "banane", "fraise");
 
 monTableau.push("figue"); //push permet d'ajouter un ou plusieurs éléments à un tableau
@@ -38,6 +38,8 @@ let search = monTableau.find(function(fruit) { //find et findIndex permettent de
     }
 });
 console.log(search);
+
+monTableau[0] = "pomme";
 
 // STRUCTURES DE CONTROLE
 
