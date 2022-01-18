@@ -5,16 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        li {
+            cursor: move;
+            width: fit-content;
+            min-width: 100px;
+            transition: 0.2s;
+        }
+    </style>
 </head>
 <body>
-    <ul>
-        <li>Marco Polo</li>
-        <li>Freddy Mercury</li>
-        <li>Albert Einstein</li>
-        <li>Benjamin Franklin</li>
-        <li>Georges Washington</li>
-        <li>Nicolas Sarkozy</li>
-        <li>Tortue Géniale</li>
+    <ul id='list'>
+        <li draggable="true">Marco Polo</li>
+        <li draggable="true">Freddy Mercury</li>
+        <li draggable="true">Albert Einstein</li>
+        <li draggable="true">Benjamin Franklin</li>
+        <li draggable="true">Georges Washington</li>
+        <li draggable="true">Nicolas Sarkozy</li>
+        <li draggable="true">Tortue Géniale</li>
+        <li draggable="false" style='list-style: none; height: 10px;'></li>
     </ul>
     <script src='script.js'></script>
 </body>
