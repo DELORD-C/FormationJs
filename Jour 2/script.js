@@ -33,3 +33,7 @@ form.addEventListener('submit', (event) => {
         document.getElementById('error').style.opacity = '1';
     }
 });
+
+//Exercice :
+// ajouter un champ téléphone de type "tel", un champ sujet de type "text", et un champ select secteur d'activité de type text (liste déroulante)
+// ajouter une vérification pour le type "tel" regex : /^((0|\+33)[0-9])( {0,1})([0-9]{2})( {0,1})([0-9]{2})( {0,1})([0-9]{2})( {0,1})([0-9]{2})$/
