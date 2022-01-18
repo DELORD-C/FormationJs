@@ -29,6 +29,7 @@ function dragOver (e) {
 
 function dragEnd (e) {
     if (draggedOn != null) {
+        console.log(dragged);
         dragged.remove();
         list.insertBefore(dragged, draggedOn);
     }
