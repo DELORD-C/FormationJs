@@ -5,16 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <button onclick="sendAlert()">Alerte</button>
-    <form action="/" id='form'>
+    <div id='loading' class='test loader in-load' style="background-color: white; position: absolute; width: 100vw; height: 100vh; top: 0; display: flex; justify-content: center; align-items: center; transition: 0.3s;">
+        <img src="load.gif">
+    </div>
+    <form action="" id='form'>
         <input class='verify' type="text" id="nom" name="nom" required placeholder="Nom">
         <input class='verify' type="text" id="prenom" name="prenom" required placeholder="Prénom">
         <input class='verify' type="email" name="email" id="email" required placeholder="Email">
+        <input class='verify' type="tel" name="tel" id="tel" required placeholder="Téléphone">
         <textarea class='verify' type="text" name="message" id="message" required placeholder="Message"></textarea>
         <input type="submit" value="Envoyer">
     </form>
+    <button onclick="resetForm()">Réinitialiser le formulaire</button>
     <p id='error' style='color: red; opacity: 0'>Merci de compléter les champs erronés</p>
     <script src="script.js"></script>
 </body>
