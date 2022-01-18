@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sendAlert()">Alerte</button>
+    <form action="/" id='form'>
+        <input class='verify' type="text" id="nom" name="nom" required placeholder="Nom">
+        <input class='verify' type="text" id="prenom" name="prenom" required placeholder="Prénom">
+        <input class='verify' type="email" name="email" id="email" required placeholder="Email">
+        <textarea class='verify' type="text" name="message" id="message" required placeholder="Message"></textarea>
+        <input type="submit" value="Envoyer">
+    </form>
+    <p id='error' style='color: red; opacity: 0'>Merci de compléter les champs erronés</p>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -143,7 +143,7 @@ function nomDeLaFonction () {
 //fonction anonyme auto invoquée : utile pour supprimer automatiquement des variables etc..
 (function ()  {
     actions();
-})
+})()
 
 //fonction anonyme stockée : utile pour manipuler des fonctions comme des variables.
 let nomDeLaFonctionAnonyme = function () {
