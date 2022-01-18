@@ -14,13 +14,14 @@
     </div>
     <form action="" id='form'>
         <input class='verify' type="text" id="nom" name="nom" required placeholder="Nom">
-        <input class='verify' type="text" id="prenom" name="prenom" required placeholder="Prénom">
-        <input class='verify' type="email" name="email" id="email" required placeholder="Email">
-        <input class='verify' type="tel" name="tel" id="tel" required placeholder="Téléphone">
-        <textarea class='verify' type="text" name="message" id="message" required placeholder="Message"></textarea>
-        <input type="submit" value="Envoyer">
+        <input class='verify' type="text" id="prenom" required placeholder="Prénom">
+        <input class='verify' type="email" name="email" required placeholder="Email">
+        <input class='verify' type="tel" name="tel" required placeholder="Téléphone">
+        <textarea class='verify' type="text" name="message" required placeholder="Message"></textarea>
+        <input id='submit' type="submit" value="Envoyer">
     </form>
     <button onclick="resetForm()">Réinitialiser le formulaire</button>
+    <button onclick="addField()">Ajouter un champs</button>
     <p id='error' style='color: red; opacity: 0'>Merci de compléter les champs erronés</p>
     <script src="script.js"></script>
 </body>

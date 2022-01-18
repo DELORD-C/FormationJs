@@ -56,11 +56,11 @@ window.addEventListener('load', () => { //l'évènement load se lance lorsque to
         //element.classList permet de récupérer la liste des classes d'un élement
         //on peut ensuite appliquer plusieurs méthodes sur cette liste de classe
         document.getElementById('loading').classList.add('loaded');//add permet d'ajouter une classe
-        document.getElementById('loading').classList.remove('loaded');//remove permet de retirer une classe
-        document.getElementById('loading').classList.toggle('loaded');//toggle permet d'ajouter ou retirer une classe en fonction de si elle était présente ou non
+        document.getElementById('loading').classList.remove('load');//remove permet de retirer une classe
+        document.getElementById('loading').classList.toggle('load');//toggle permet d'ajouter ou retirer une classe en fonction de si elle était présente ou non
         document.getElementById('loading').classList.item('loaded');//item renvoi l'index d'une classe
         document.getElementById('loading').classList.contains('loaded');//contains renvoi true si la classe existe, et false si elle n'existe pas
-        document.getElementById('loading').classList.replace('loaded', 'newLoaded');//replace permet de remplacer une classe par une autre
+        document.getElementById('loading').classList.replace('load', 'newLoaded');//replace permet de remplacer une classe par une autre
     }, 100) //le délai est précisé en millisecondes
 })
 
@@ -70,3 +70,38 @@ window.addEventListener('resize', () => {//resize se lance quand on modifie la t
     console.log('La fenètre est redimensionnée');
 })
 
+///////////////
+//parentalité//
+///////////////
+console.log(document.getElementById('loading').childNodes[1]); //childNodes permet de récupérer les enfants d'un élément
+console.log(document.getElementById('loading').parentNode); //parentNode permet de récupérer le parent d'un élément
+
+//nextSibling selectionne le noeud suivant (saut de ligne compris)
+//nextElementSibling selectionne l'éelement html suivant (saut de ligne exclus)
+//previousSibling selectionne le noeud précédent (saut de ligne compris)
+//previousElementSibling selectionne l'éelement html précédent (saut de ligne exclus)
+console.log(document.getElementById('nom').nextElementSibling.nextElementSibling.nextElementSibling);
+console.log(document.getElementById('nom').previousElementSibling);
+
+
+
+
+
+
+
+///////////////////////////////////
+//Ajout et Suppression d'éléments//
+///////////////////////////////////
+
+function addField() {
+    //1 créer un élément
+    let newElement = document.createElement('input');
+    newElement.setAttribute('type', 'text');
+    newElement.setAttribute('required', '');
+    newElement.setAttribute('placeholder', 'Autre');
+    //form.append(newElement);//ajoute l'élément 'newElement' en dernier enfant de 'form'
+    form.insertBefore(newElement, document.getElementById('submit'));//ajoute l'élément 'newElement' avant 'submit' dans l'élement 'form'
+}
+
+//on peut aussi retirer un élement avec element.remove()
+document.getElementById('prenom').remove();
