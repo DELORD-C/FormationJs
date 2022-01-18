@@ -10,4 +10,8 @@
 //let j1 = new Personnage(10, 2, 'Héro');
 //let j2 = new Personnage(4, 1, 'Monstre');
 //j1.attaque(j2)
-//doit afficher dans la console : "Héro inflige 2 points de dégâts à Monstre"
+//j1.attaque(j2)
+//doit afficher dans la console : 
+//"Héro inflige 2 points de dégâts à Monstre"
+//"Héro inflige 2 points de dégâts à Monstre"
+//"Monstre est mort."

@@ -40,3 +40,12 @@ function showTitle() {
     let title = document.querySelector('h1');
     title.style.opacity = 1;
 }
+
+//methode 1 avec queryselector
+console.log(document.querySelector('#paragraph span:first-child'));
+
+//methode 2 avec getElementById sur parent
+console.log(document.getElementById('paragraph').childNodes[1]);
+
+//methode 3 avec ajout de l'id directement dans l'html
+console.log(document.getElementById('span'));
