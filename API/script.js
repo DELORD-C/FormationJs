@@ -31,11 +31,15 @@ function displayData (data) {
 }
 
 btn.addEventListener('click', () => {
+    updateData();
+});
+
+function updateData () {
     ul.innerHTML = '<img src="load.gif">';
     let val = search.value;
     console.log(val);
     getResult(val);
-});
+}
 
 getResult();
 
@@ -47,4 +51,5 @@ getResult();
 //Aller plus loin :
 // Ajouter un gif de chargement pendant la mise à jour des données
 // Supprimer le bouton OK et mettre en place un eventListenenr pour que la mise à jour se fasse automatiquement au changement de valeur de notre champ search
+//      Indice : change
 // Ajouter un délai avant la mise à jour pour éviter les baisses de performances lors de la frappe
