@@ -1,6 +1,7 @@
 let ul = document.getElementById('list'),
     search = document.getElementById('search'),
     btn = document.getElementById('btn'),
+    timeout,
     request = new XMLHttpRequest();
 
 function getResult(val = null) {
@@ -20,24 +21,26 @@ function getResult(val = null) {
 }
 
 function displayData (data) {
-    setTimeout(function(){
-        ul.innerHTML = '';
+    ul.innerHTML = '';
+    if (data != null) {
         for (let entrie of data) {
             let li = document.createElement('li');
             li.innerHTML = '<a href="' + entrie.Link + '">' + entrie.API + '</a>';
             ul.append(li);
         }
-    }, 1000);
+    }
 }
 
-btn.addEventListener('click', () => {
-    updateData();
+search.addEventListener('keyup', () => {
+    ul.innerHTML = '<img src="load.gif">';
+    clearTimeout(timeout);
+    timeout = setTimeout(function(){
+        updateData();
+    }, 1000);
 });
 
 function updateData () {
-    ul.innerHTML = '<img src="load.gif">';
     let val = search.value;
-    console.log(val);
     getResult(val);
 }
 
