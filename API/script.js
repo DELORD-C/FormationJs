@@ -1,16 +1,15 @@
 let ul = document.getElementById('list'),
     search = document.getElementById('search'),
-    btn = document.getElementById('btn'),
     timeout,
     request = new XMLHttpRequest();
 
+request.onreadystatechange = function () {
+    if (request.readyState === 4) {
+        displayData(JSON.parse(request.responseText).entries);
+    }
+};
+
 function getResult(val = null) {
-    request.onreadystatechange = function () {
-        if (request.readyState === 4) {
-            let data = JSON.parse(request.responseText);
-            displayData(data.entries);
-        }
-    };
     if (val == null) {
         request.open('GET', 'https://api.publicapis.org/entries');
     }
@@ -35,14 +34,9 @@ search.addEventListener('keyup', () => {
     ul.innerHTML = '<img src="load.gif">';
     clearTimeout(timeout);
     timeout = setTimeout(function(){
-        updateData();
+        getResult(search.value);
     }, 1000);
 });
-
-function updateData () {
-    let val = search.value;
-    getResult(val);
-}
 
 getResult();
 
