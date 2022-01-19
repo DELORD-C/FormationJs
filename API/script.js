@@ -20,15 +20,18 @@ function getResult(val = null) {
 }
 
 function displayData (data) {
-    for (let entrie of data) {
-        let li = document.createElement('li');
-        li.innerHTML = '<a href="' + entrie.Link + '">' + entrie.API + '</a>';
-        ul.append(li);
-    }
+    setTimeout(function(){
+        ul.innerHTML = '';
+        for (let entrie of data) {
+            let li = document.createElement('li');
+            li.innerHTML = '<a href="' + entrie.Link + '">' + entrie.API + '</a>';
+            ul.append(li);
+        }
+    }, 1000);
 }
 
 btn.addEventListener('click', () => {
-    ul.innerHTML = '';
+    ul.innerHTML = '<img src="load.gif">';
     let val = search.value;
     console.log(val);
     getResult(val);
@@ -44,4 +47,4 @@ getResult();
 //Aller plus loin :
 // Ajouter un gif de chargement pendant la mise à jour des données
 // Supprimer le bouton OK et mettre en place un eventListenenr pour que la mise à jour se fasse automatiquement au changement de valeur de notre champ search
-// Ajouter un délai avant la mise à jour pour éviter les baisses de performances lors de la frappe$
+// Ajouter un délai avant la mise à jour pour éviter les baisses de performances lors de la frappe
